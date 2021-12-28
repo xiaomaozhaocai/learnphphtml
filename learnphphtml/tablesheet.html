@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>填写表单</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
 </head>
 <body>
+<div id="app">
+    <p>{{ message }}</p>
+</div>
 <form action="tablesheet.php" method="post">
     <p>姓名: <input type="text" name="name" /></p>
     <p>年龄: <input type="text" name="age" /></p>
     <p><input type="submit" /></p>
 </form>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue.js!'
+        }
+    })
+</script>
 </body>
 </html>
